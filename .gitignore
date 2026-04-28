@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Spark / Delta / Iceberg artifacts
+spark-warehouse/
+derby.log
+metastore_db/
+*.crc
+.spark-staging-*/
+
+# Data — never commit warehouses
+data/delta/
+data/iceberg/
+# raw data: keep the directory but ignore large CSVs (we keep Pokemon.csv as fallback)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/Pokemon.csv
+
+# MkDocs build output
+site/
+# Notebooks staged for MkDocs (gerado pelo workflow / por uso local)
+docs/notebooks/
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

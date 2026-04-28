@@ -1,0 +1,89 @@
+site_name: Spark Lakehouse Project — Delta & Iceberg
+site_description: Trabalho de Engenharia de Dados — PySpark + Jupyter + Delta Lake + Apache Iceberg sobre o dataset Pokémon
+site_author: Lucas Hoffmann
+site_url: https://lucascholzeh.github.io/spark-lakehouse-project/
+repo_url: https://github.com/lucascholzeh/spark-lakehouse-project
+repo_name: lucascholzeh/spark-lakehouse-project
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: pt
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+      allow_errors: false
+
+nav:
+  - Início: index.md
+  - Apache Spark / PySpark: pyspark.md
+  - Delta Lake: delta-lake.md
+  - Apache Iceberg: iceberg.md
+  - Notebooks executados:
+      - "00 — Modelagem (ER + DDL)": notebooks/00_modelagem_dados.ipynb
+      - "01 — Delta Lake (CRUD + time travel)": notebooks/01_delta_lake.ipynb
+      - "02 — Apache Iceberg (CRUD + partition evolution)": notebooks/02_apache_iceberg.ipynb
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lucascholzeh/spark-lakehouse-project
+
+copyright: Copyright &copy; 2026 Lucas Hoffmann — Trabalho acadêmico de Engenharia de Dados

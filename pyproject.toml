@@ -1,0 +1,32 @@
+[project]
+name = "spark-lakehouse-project"
+version = "0.1.0"
+description = "PySpark + Delta Lake + Apache Iceberg lakehouse demo using the Pokemon dataset"
+readme = "README.md"
+requires-python = "==3.11.*"
+license = { text = "MIT" }
+authors = [
+    { name = "Lucas Hoffmann" },
+]
+dependencies = [
+    "pyspark==3.5.3",
+    "delta-spark==3.2.1",
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "findspark>=2.0",
+    "grpcio>=1.60",
+    "grpcio-status>=1.60",
+    "google-api-core>=2.0",
+]
+
+[dependency-groups]
+docs = [
+    "mkdocs-material>=9.5",
+    "mkdocs-jupyter>=0.25",
+    "pymdown-extensions>=10",
+]
+
+[tool.uv]
+package = false

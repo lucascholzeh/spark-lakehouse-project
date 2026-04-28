@@ -22,7 +22,7 @@ A demonstração é feita sobre um **modelo dimensional (estrela)** derivado do 
 
 ---
 
-## :material-architecture: Arquitetura do projeto
+## :material-sitemap: Arquitetura do projeto
 
 ```mermaid
 flowchart LR

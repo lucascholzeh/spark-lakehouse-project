@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wsl --list --verbose)",
+      "Bash(wsl -d Ubuntu -- bash -c \"lsb_release -a 2>/dev/null; echo '---'; java -version 2>&1 || echo 'Java não instalado'; echo '---'; python3 --version 2>&1; echo '---'; which uv poetry 2>&1\")",
+      "WebSearch",
+      "WebFetch(domain:iceberg.apache.org)",
+      "Bash(curl -sL -o \"c:/Users/User/Desktop/Trab. Eng. Dados/data/raw/Pokemon.csv\" \"https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv\")",
+      "Bash(python -c ' *)",
+      "Bash(wsl -d Ubuntu -- bash -c \"cd '/mnt/c/Users/User/Desktop/Trab. Eng. Dados' && python3 -c \\\\\"import yaml; yaml.safe_load\\(open\\('.github/workflows/deploy-docs.yml'\\)\\); print\\('OK workflow'\\)\\\\\"\")",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(docker run *)",
+      "Bash(where uv *)",
+      "Bash(uv lock *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)"
+    ]
+  }
+}

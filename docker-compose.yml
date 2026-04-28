@@ -1,0 +1,32 @@
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: spark-lakehouse-project:latest
+    container_name: spark-lakehouse-jupyter
+    ports:
+      # JupyterLab — bound to localhost only (no token)
+      - "127.0.0.1:8888:8888"
+      # MkDocs serve (uv run mkdocs serve -a 0.0.0.0:8000)
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./notebooks:/workspace/notebooks
+      - ./data:/workspace/data
+      - ./docs:/workspace/docs
+      - ./scripts:/workspace/scripts
+      # Persist Ivy/Maven cache so Iceberg JARs aren't re-downloaded on every run
+      - ivy-cache:/root/.ivy2
+      - m2-cache:/root/.m2
+    environment:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+      PYSPARK_PYTHON: python
+      PYSPARK_DRIVER_PYTHON: python
+      # Allow Spark on JDK 17
+      SPARK_LOCAL_IP: 127.0.0.1
+    restart: unless-stopped
+    shm_size: "2gb"
+
+volumes:
+  ivy-cache:
+  m2-cache:

@@ -244,6 +244,8 @@ spark-lakehouse-project/
         └── deploy-docs.yml            ← GitHub Action: gh-deploy
 ```
 
+---
+
 ## 🩺 Troubleshooting
 
 ### Porta 8888 já em uso
@@ -356,7 +358,6 @@ Todo o código foi revisado, testado e adaptado pelo autor. Decisões arquitetur
 **Lucas Hoffmann, Victor Casagrande e Davi Novakoski**
 
 - Emails: lucasschoff@gmail.com, davinovakoskim@gmail.com e casagrandevictor662@gmail.com
-- GitHub: [@lucascholzeh](https://github.com/lucascholzeh)
 - Documentação publicada: <https://lucascholzeh.github.io/spark-lakehouse-project/>
 
 ---

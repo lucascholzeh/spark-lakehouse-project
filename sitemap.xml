@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/delta-lake/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/iceberg/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/pyspark/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/notebooks/00_modelagem_dados/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/notebooks/01_delta_lake/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lucascholzeh.github.io/spark-lakehouse-project/notebooks/02_apache_iceberg/</loc>
+         <lastmod>2026-04-29</lastmod>
+    </url>
+</urlset>

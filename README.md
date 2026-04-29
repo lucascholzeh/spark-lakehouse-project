@@ -83,20 +83,6 @@ Este repositório entrega:
 
 ---
 
-## 🐳 Por que Docker Ubuntu e não WSL direto?
-
-O trabalho **precisa rodar em Linux** mas o host é Windows. As opções eram:
-
-| Opção | Reprodutível? | Setup do avaliador | Veredito |
-|---|---|---|---|
-| **Docker container Ubuntu** | ✅ Idêntico em qualquer host | Só Docker Desktop | **Escolhida** |
-| WSL2 Ubuntu direto | ❌ Depende do estado da distro | Instalar WSL + dependências | Frágil |
-| VM VirtualBox/Hyper-V | ⚠️ Pesada | Instalar VM + ISO | Overhead alto |
-
-Numa apresentação acadêmica de **10 minutos onde "não funcionou = nota 0"**, reprodutibilidade é prioridade absoluta. O `docker-compose.yml` é a **única dependência** do avaliador.
-
----
-
 ## 🧰 Pré-requisitos no host Windows
 
 | Software | Link | Versão mínima |
@@ -258,26 +244,6 @@ spark-lakehouse-project/
         └── deploy-docs.yml            ← GitHub Action: gh-deploy
 ```
 
----
-
-## 🎬 Roteiro de apresentação (10 min)
-
-> Use este roteiro durante a apresentação para o professor. Tempo total: **9 min de demo + 1 min de Q&A**.
-
-| Tempo | Ação | O que mostrar |
-|---|---|---|
-| **0:00 – 1:00** | Abrir o repositório no GitHub | README com badges, estrutura de pastas, link para o MkDocs publicado |
-| **1:00 – 2:00** | Abrir o MkDocs publicado | Página inicial, navegação pelas 4 páginas, diagramas Mermaid renderizando, código com syntax highlight |
-| **2:00 – 2:30** | Subir o ambiente | `docker compose up -d` + `docker compose logs jupyter` + abrir <http://localhost:8888> |
-| **2:30 – 4:30** | Notebook 00 — modelagem | Mostrar diagrama ER (Mermaid), DDLs lado a lado, rodar pipeline bronze→silver→gold, conferir schemas |
-| **4:30 – 7:00** | Notebook 01 — Delta Lake | Rodar células: write inicial → INSERT → UPDATE (avg attack lendários antes/depois) → DELETE → MERGE → schema evolution → **time travel** (versão 0 vs atual) → DESCRIBE HISTORY |
-| **7:00 – 9:00** | Notebook 02 — Iceberg | Mesmo CRUD via SQL puro → schema evolution → **partition evolution (destacar: só Iceberg tem)** → time travel → metadata tables (`.snapshots`, `.history`, `.files`) → compaction |
-| **9:00 – 10:00** | Conclusão | Tabela comparativa Delta × Iceberg, próximos passos, Q&A |
-
-> 💡 **Dica para a apresentação**: deixe o ambiente **já buildado** antes (`docker compose up -d` 5 min antes do horário) para o slot 2:00–2:30 ser instantâneo. O cache de JARs do Iceberg também já estará quente.
-
----
-
 ## 🩺 Troubleshooting
 
 ### Porta 8888 já em uso
@@ -385,14 +351,12 @@ Todo o código foi revisado, testado e adaptado pelo autor. Decisões arquitetur
 
 ---
 
-## 👤 Autor
+## 👤 Autores
 
-**Lucas Hoffmann**
+**Lucas Hoffmann, Victor Casagrande e Davi Novakoski**
 
-- Email: lucasschoff@gmail.com
+- Emails: lucasschoff@gmail.com, davinovakoskim@gmail.com e casagrandevictor662@gmail.com
 - GitHub: [@lucascholzeh](https://github.com/lucascholzeh)
 - Documentação publicada: <https://lucascholzeh.github.io/spark-lakehouse-project/>
 
 ---
-
-📄 **Licença**: MIT

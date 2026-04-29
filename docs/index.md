@@ -208,8 +208,7 @@ Esta documentação e o código foram desenvolvidos com auxílio de **IA generat
 
 ## :material-account: Autoria
 
-**Lucas Hoffmann**
+**Lucas Hoffmann, Victor Casagrande e Davi Novakoski**
 
 - Trabalho acadêmico — Engenharia de Dados
 - Repositório: [github.com/lucascholzeh/spark-lakehouse-project](https://github.com/lucascholzeh/spark-lakehouse-project)
-- Documentação: você está aqui :material-arrow-down:
